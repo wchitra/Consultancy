@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  firstName: MyString
+  lastName: MyString
+  status: MyString
+  level: MyString
+  phoneScreenDate: 2010-07-07
+  phoneScreener: 
+
+two:
+  firstName: MyString
+  lastName: MyString
+  status: MyString
+  level: MyString
+  phoneScreenDate: 2010-07-07
+  phoneScreener: 

@@ -1,0 +1,850 @@
+
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-07 10:17:03) [GET]
+
+ActionController::RoutingError (No route matches "/recruit" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 10:18:04) [GET]
+  [4;36;1mRecruit Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: recruits: SELECT * FROM "recruits" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: recruits: SELECT * FROM "recruits" ):
+  app/controllers/recruits_controller.rb:5:in `index'
+
+Rendered rescues/_trace (98.8ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-07 10:18:32) [GET]
+
+ActionController::RoutingError (No route matches "/recruit/index" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-07 10:18:39) [GET]
+
+ActionController::RoutingError (No route matches "/recruit/index.html" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RecruitsController#show to html (for 127.0.0.1 at 2010-07-07 10:19:07) [GET]
+  Parameters: {"id"=>"index"}
+
+ActiveRecord::StatementInvalid (Could not find table 'recruits'):
+  app/controllers/recruits_controller.rb:16:in `show'
+
+Rendered rescues/_trace (105.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.7ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecruits (20100707151432)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "recruits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstName" varchar(255), "lastName" varchar(255), "status" varchar(255), "level" varchar(255), "phoneScreenDate" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100707151432')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("recruits")[0m
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 10:21:36) [GET]
+  [4;35;1mRecruit Load (0.4ms)[0m   [0mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 20ms (View: 16, DB: 0) | 200 OK [http://localhost/recruits]
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 10:21:48) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+
+ActionView::TemplateError (undefined method `phoneScreener' for #<Recruit:0x101f17500>) on line #28 of app/views/recruits/new.html.erb:
+25:   </p>
+26:   <p>
+27:     <%= f.label :phoneScreener %><br />
+28:     <%= f.text_field :phoneScreener %>
+29:   </p>
+30:   <p>
+31:     <%= f.submit 'Create' %>
+
+    app/views/recruits/new.html.erb:28
+    app/views/recruits/new.html.erb:3
+    app/controllers/recruits_controller.rb:29:in `new'
+
+Rendered rescues/_trace (64.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 10:22:10) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+
+ActionView::TemplateError (undefined method `phoneScreener' for #<Recruit:0x101654350>) on line #28 of app/views/recruits/new.html.erb:
+25:   </p>
+26:   <p>
+27:     <%= f.label :phoneScreener %><br />
+28:     <%= f.text_field :phoneScreener %>
+29:   </p>
+30:   <p>
+31:     <%= f.submit 'Create' %>
+
+    app/views/recruits/new.html.erb:28
+    app/views/recruits/new.html.erb:3
+    app/controllers/recruits_controller.rb:29:in `new'
+
+Rendered rescues/_trace (64.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecruits (20100707151432)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("recruits")[0m
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 10:23:00) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+
+ActionView::TemplateError (undefined method `phoneScreener' for #<Recruit:0x10162b4c8>) on line #28 of app/views/recruits/new.html.erb:
+25:   </p>
+26:   <p>
+27:     <%= f.label :phoneScreener %><br />
+28:     <%= f.text_field :phoneScreener %>
+29:   </p>
+30:   <p>
+31:     <%= f.submit 'Create' %>
+
+    app/views/recruits/new.html.erb:28
+    app/views/recruits/new.html.erb:3
+    app/controllers/recruits_controller.rb:29:in `new'
+
+Rendered rescues/_trace (65.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 10:23:03) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+
+ActionView::TemplateError (undefined method `phoneScreener' for #<Recruit:0x1015dd200>) on line #28 of app/views/recruits/new.html.erb:
+25:   </p>
+26:   <p>
+27:     <%= f.label :phoneScreener %><br />
+28:     <%= f.text_field :phoneScreener %>
+29:   </p>
+30:   <p>
+31:     <%= f.submit 'Create' %>
+
+    app/views/recruits/new.html.erb:28
+    app/views/recruits/new.html.erb:3
+    app/controllers/recruits_controller.rb:29:in `new'
+
+Rendered rescues/_trace (64.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecruits (20100707151432)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("recruits")[0m
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 10:24:00) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+
+ActionView::TemplateError (undefined method `phoneScreener' for #<Recruit:0x10158a0a0>) on line #28 of app/views/recruits/new.html.erb:
+25:   </p>
+26:   <p>
+27:     <%= f.label :phoneScreener %><br />
+28:     <%= f.text_field :phoneScreener %>
+29:   </p>
+30:   <p>
+31:     <%= f.submit 'Create' %>
+
+    app/views/recruits/new.html.erb:28
+    app/views/recruits/new.html.erb:3
+    app/controllers/recruits_controller.rb:29:in `new'
+
+Rendered rescues/_trace (63.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 10:24:01) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+
+ActionView::TemplateError (undefined method `phoneScreener' for #<Recruit:0x1015697b0>) on line #28 of app/views/recruits/new.html.erb:
+25:   </p>
+26:   <p>
+27:     <%= f.label :phoneScreener %><br />
+28:     <%= f.text_field :phoneScreener %>
+29:   </p>
+30:   <p>
+31:     <%= f.submit 'Create' %>
+
+    app/views/recruits/new.html.erb:28
+    app/views/recruits/new.html.erb:3
+    app/controllers/recruits_controller.rb:29:in `new'
+
+Rendered rescues/_trace (63.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 10:24:02) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+
+ActionView::TemplateError (undefined method `phoneScreener' for #<Recruit:0x101536ba8>) on line #28 of app/views/recruits/new.html.erb:
+25:   </p>
+26:   <p>
+27:     <%= f.label :phoneScreener %><br />
+28:     <%= f.text_field :phoneScreener %>
+29:   </p>
+30:   <p>
+31:     <%= f.submit 'Create' %>
+
+    app/views/recruits/new.html.erb:28
+    app/views/recruits/new.html.erb:3
+    app/controllers/recruits_controller.rb:29:in `new'
+
+Rendered rescues/_trace (65.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 10:24:02) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+
+ActionView::TemplateError (undefined method `phoneScreener' for #<Recruit:0x101231430>) on line #28 of app/views/recruits/new.html.erb:
+25:   </p>
+26:   <p>
+27:     <%= f.label :phoneScreener %><br />
+28:     <%= f.text_field :phoneScreener %>
+29:   </p>
+30:   <p>
+31:     <%= f.submit 'Create' %>
+
+    app/views/recruits/new.html.erb:28
+    app/views/recruits/new.html.erb:3
+    app/controllers/recruits_controller.rb:29:in `new'
+
+Rendered rescues/_trace (66.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 10:24:10) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+
+ActionView::TemplateError (undefined method `phoneScreener' for #<Recruit:0x1011b7770>) on line #28 of app/views/recruits/new.html.erb:
+25:   </p>
+26:   <p>
+27:     <%= f.label :phoneScreener %><br />
+28:     <%= f.text_field :phoneScreener %>
+29:   </p>
+30:   <p>
+31:     <%= f.submit 'Create' %>
+
+    app/views/recruits/new.html.erb:28
+    app/views/recruits/new.html.erb:3
+    app/controllers/recruits_controller.rb:29:in `new'
+
+Rendered rescues/_trace (63.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecruits (20100707151432)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("recruits")[0m
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 10:24:37) [GET]
+  [4;36;1mRecruit Load (0.4ms)[0m   [0;1mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/recruits]
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 10:24:38) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+
+ActionView::TemplateError (undefined method `phoneScreener' for #<Recruit:0x10222c4e8>) on line #28 of app/views/recruits/new.html.erb:
+25:   </p>
+26:   <p>
+27:     <%= f.label :phoneScreener %><br />
+28:     <%= f.text_field :phoneScreener %>
+29:   </p>
+30:   <p>
+31:     <%= f.submit 'Create' %>
+
+    app/views/recruits/new.html.erb:28
+    app/views/recruits/new.html.erb:3
+    app/controllers/recruits_controller.rb:29:in `new'
+
+Rendered rescues/_trace (119.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecruits (20100707152520)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table "recruits" already exists: CREATE TABLE "recruits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstName" varchar(255), "lastName" varchar(255), "status" varchar(255), "level" varchar(255), "phoneScreenDate" date, "phoneScreener" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 10:27:23) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+
+ActionView::TemplateError (undefined method `phoneScreener' for #<Recruit:0x101f33f20>) on line #28 of app/views/recruits/new.html.erb:
+25:   </p>
+26:   <p>
+27:     <%= f.label :phoneScreener %><br />
+28:     <%= f.text_field :phoneScreener %>
+29:   </p>
+30:   <p>
+31:     <%= f.submit 'Create' %>
+
+    app/views/recruits/new.html.erb:28
+    app/views/recruits/new.html.erb:3
+    app/controllers/recruits_controller.rb:29:in `new'
+
+Rendered rescues/_trace (115.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 10:27:28) [GET]
+  [4;35;1mRecruit Load (0.4ms)[0m   [0mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/recruits]
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 10:27:31) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+
+ActionView::TemplateError (undefined method `phoneScreener' for #<Recruit:0x101d11260>) on line #28 of app/views/recruits/new.html.erb:
+25:   </p>
+26:   <p>
+27:     <%= f.label :phoneScreener %><br />
+28:     <%= f.text_field :phoneScreener %>
+29:   </p>
+30:   <p>
+31:     <%= f.submit 'Create' %>
+
+    app/views/recruits/new.html.erb:28
+    app/views/recruits/new.html.erb:3
+    app/controllers/recruits_controller.rb:29:in `new'
+
+Rendered rescues/_trace (116.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecruits (20100707152520)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE TABLE "recruits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstName" varchar(255), "lastName" varchar(255), "status" varchar(255), "level" varchar(255), "phoneScreenDate" date, "phoneScreener" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100707152520')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("recruits")[0m
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 11:13:48) [GET]
+  [4;36;1mRecruit Load (0.4ms)[0m   [0;1mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 93ms (View: 89, DB: 0) | 200 OK [http://localhost/recruits/]
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 11:13:50) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+Completed in 110ms (View: 106, DB: 0) | 200 OK [http://localhost/recruits/new]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecruits (20100707152520)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("recruits")[0m
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 11:15:54) [GET]
+  [4;35;1mRecruit Load (0.3ms)[0m   [0mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/recruits]
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 11:15:56) [GET]
+  [4;36;1mRecruit Load (0.4ms)[0m   [0;1mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/recruits]
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 11:15:58) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/recruits/new]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecruits (20100707152520)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("recruits")[0m
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 11:21:22) [GET]
+  [4;35;1mRecruit Load (0.4ms)[0m   [0mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 6ms (View: 2, DB: 0) | 200 OK [http://localhost/recruits]
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 11:21:27) [GET]
+  [4;36;1mRecruit Load (0.4ms)[0m   [0;1mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 53ms (View: 1, DB: 0) | 200 OK [http://localhost/recruits]
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 11:22:06) [GET]
+
+ActiveRecord::StatementInvalid (Could not find table 'recruits'):
+  app/controllers/recruits_controller.rb:27:in `new'
+  app/controllers/recruits_controller.rb:27:in `new'
+
+Rendered rescues/_trace (49.1ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecruits (20100707152520)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "recruits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "status" varchar(255), "level" varchar(255), "phone_screen_date" date, "phone_screener" varchar(255), "problem_assigned" date, "problem_received" date, "reviewer" varchar(255), "review_completed" date, "possible_assignment" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100707152520')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("recruits")[0m
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 11:23:29) [GET]
+  [4;35;1mRecruit Load (0.4ms)[0m   [0mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/recruits]
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 11:23:30) [GET]
+  [4;36;1mRecruit Load (0.4ms)[0m   [0;1mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/recruits]
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 11:23:32) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+
+ActionView::TemplateError (undefined method `firstName' for #<Recruit:0x1023d53d0>) on line #8 of app/views/recruits/new.html.erb:
+5: 
+6:   <p>
+7:     <%= f.label :firstName %><br />
+8:     <%= f.text_field :firstName %>
+9:   </p>
+10:   <p>
+11:     <%= f.label :lastName %><br />
+
+    app/views/recruits/new.html.erb:8
+    app/views/recruits/new.html.erb:3
+    app/controllers/recruits_controller.rb:29:in `new'
+
+Rendered rescues/_trace (66.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 11:26:54) [GET]
+  [4;35;1mRecruit Load (0.4ms)[0m   [0mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/recruits]
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 11:26:56) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/recruits/new]
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 11:26:57) [GET]
+  [4;36;1mRecruit Load (0.3ms)[0m   [0;1mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/recruits]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecruits (20100707152520)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("recruits")[0m
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 11:27:08) [GET]
+  [4;35;1mRecruit Load (0.4ms)[0m   [0mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/recruits]
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 11:35:14) [GET]
+  [4;36;1mRecruit Load (0.4ms)[0m   [0;1mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/recruits]
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 11:35:18) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/recruits/new]
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 11:35:19) [GET]
+  [4;35;1mRecruit Load (0.4ms)[0m   [0mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/recruits]
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 11:38:09) [GET]
+  [4;36;1mRecruit Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: recruits: SELECT * FROM "recruits" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: recruits: SELECT * FROM "recruits" ):
+  app/controllers/recruits_controller.rb:5:in `index'
+
+Rendered rescues/_trace (50.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateRecruits (20100707152520)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "recruits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar(255), "last_name" varchar(255), "status" varchar(255), "level" varchar(255), "phone_screen_date" date, "phone_screener" varchar(255), "problem_assigned" date, "problem_received" date, "reviewer" varchar(255), "review_completed" date, "possible_assignment" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100707152520')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("recruits")[0m
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 11:38:21) [GET]
+  [4;35;1mRecruit Load (0.4ms)[0m   [0mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/recruits]
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 12:11:03) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+Completed in 31ms (View: 26, DB: 0) | 200 OK [http://localhost/recruits/new]
+
+
+Processing RecruitsController#create (for 127.0.0.1 at 2010-07-07 12:12:13) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"xU0O2ltx3AADFy2RU/jPs6MvRblAtWzhluqB7dUjglg=", "recruit"=>{"problem_received(2i)"=>"7", "problem_received(3i)"=>"7", "phone_screener"=>"Wit C", "problem_assigned(1i)"=>"2010", "review_completed(1i)"=>"2010", "problem_assigned(2i)"=>"7", "level"=>"SE", "review_completed(2i)"=>"7", "problem_assigned(3i)"=>"7", "phone_screen_date(1i)"=>"2010", "review_completed(3i)"=>"7", "phone_screen_date(2i)"=>"7", "possible_assignment"=>"Dominick's", "phone_screen_date(3i)"=>"7", "last_name"=>"Bean", "reviewer"=>"Wit C", "status"=>"Active", "problem_received(1i)"=>"2010", "first_name"=>"Jim"}}
+  [4;36;1mRecruit Create (2.1ms)[0m   [0;1mINSERT INTO "recruits" ("phone_screener", "problem_assigned", "created_at", "problem_received", "updated_at", "level", "review_completed", "last_name", "phone_screen_date", "possible_assignment", "status", "reviewer", "first_name") VALUES('Wit C', '2010-07-07', '2010-07-07 17:12:13', '2010-07-07', '2010-07-07 17:12:13', 'SE', '2010-07-07', 'Bean', '2010-07-07', 'Dominick''s', 'Active', 'Wit C', 'Jim')[0m
+Redirected to http://localhost:3000/recruits/1
+Completed in 18ms (DB: 2) | 302 Found [http://localhost/recruits]
+
+
+Processing RecruitsController#show (for 127.0.0.1 at 2010-07-07 12:12:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mRecruit Load (0.3ms)[0m   [0mSELECT * FROM "recruits" WHERE ("recruits"."id" = 1) [0m
+Rendering template within layouts/recruits
+Rendering recruits/show
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/recruits/1]
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 12:12:15) [GET]
+  [4;36;1mRecruit Load (0.5ms)[0m   [0;1mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 12ms (View: 8, DB: 1) | 200 OK [http://localhost/recruits]
+
+
+Processing RecruitsController#edit (for 127.0.0.1 at 2010-07-07 12:18:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mRecruit Load (0.3ms)[0m   [0mSELECT * FROM "recruits" WHERE ("recruits"."id" = 1) [0m
+Rendering template within layouts/recruits
+Rendering recruits/edit
+Completed in 34ms (View: 28, DB: 0) | 200 OK [http://localhost/recruits/1/edit]
+
+
+Processing RecruitsController#edit (for 127.0.0.1 at 2010-07-07 13:14:37) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (/Users/witchitrapongse/Sites/recruit/app/models/recruit.rb:5: syntax error, unexpected tSTRING_BEG, expecting ']'
+      "Offer Not Tendered",
+       ^
+/Users/witchitrapongse/Sites/recruit/app/models/recruit.rb:5: syntax error, unexpected ',', expecting kEND
+/Users/witchitrapongse/Sites/recruit/app/models/recruit.rb:6: syntax error, unexpected ',', expecting kEND
+/Users/witchitrapongse/Sites/recruit/app/models/recruit.rb:8: syntax error, unexpected ']', expecting kEND
+    ].freeze
+     ^):
+  app/controllers/recruits_controller.rb:37:in `edit'
+
+Rendered rescues/_trace (102.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecruitsController#edit (for 127.0.0.1 at 2010-07-07 13:14:55) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (/Users/witchitrapongse/Sites/recruit/app/models/recruit.rb:5: syntax error, unexpected tSTRING_BEG, expecting ']'
+      "Offer Not Tendered",
+       ^
+/Users/witchitrapongse/Sites/recruit/app/models/recruit.rb:5: syntax error, unexpected ',', expecting kEND
+/Users/witchitrapongse/Sites/recruit/app/models/recruit.rb:6: syntax error, unexpected ',', expecting kEND
+/Users/witchitrapongse/Sites/recruit/app/models/recruit.rb:8: syntax error, unexpected ']', expecting kEND
+    ].freeze
+     ^):
+  app/controllers/recruits_controller.rb:37:in `edit'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecruitsController#edit (for 127.0.0.1 at 2010-07-07 13:14:56) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (/Users/witchitrapongse/Sites/recruit/app/models/recruit.rb:5: syntax error, unexpected tSTRING_BEG, expecting ']'
+      "Offer Not Tendered",
+       ^
+/Users/witchitrapongse/Sites/recruit/app/models/recruit.rb:5: syntax error, unexpected ',', expecting kEND
+/Users/witchitrapongse/Sites/recruit/app/models/recruit.rb:6: syntax error, unexpected ',', expecting kEND
+/Users/witchitrapongse/Sites/recruit/app/models/recruit.rb:8: syntax error, unexpected ']', expecting kEND
+    ].freeze
+     ^):
+  app/controllers/recruits_controller.rb:37:in `edit'
+
+Rendered rescues/_trace (114.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 13:14:59) [GET]
+
+SyntaxError (/Users/witchitrapongse/Sites/recruit/app/models/recruit.rb:5: syntax error, unexpected tSTRING_BEG, expecting ']'
+      "Offer Not Tendered",
+       ^
+/Users/witchitrapongse/Sites/recruit/app/models/recruit.rb:5: syntax error, unexpected ',', expecting kEND
+/Users/witchitrapongse/Sites/recruit/app/models/recruit.rb:6: syntax error, unexpected ',', expecting kEND
+/Users/witchitrapongse/Sites/recruit/app/models/recruit.rb:8: syntax error, unexpected ']', expecting kEND
+    ].freeze
+     ^):
+  app/controllers/recruits_controller.rb:27:in `new'
+
+Rendered rescues/_trace (47.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 13:15:28) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+Completed in 159ms (View: 154, DB: 0) | 200 OK [http://localhost/recruits/new]
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-07 13:15:41) [GET]
+  [4;36;1mRecruit Load (1.4ms)[0m   [0;1mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 13ms (View: 8, DB: 1) | 200 OK [http://localhost/recruits]
+
+
+Processing RecruitsController#new (for 127.0.0.1 at 2010-07-07 13:15:42) [GET]
+Rendering template within layouts/recruits
+Rendering recruits/new
+Completed in 31ms (View: 26, DB: 0) | 200 OK [http://localhost/recruits/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-08 16:59:26) [GET]
+
+ActionController::RoutingError (No route matches "/consultantcy/" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-08 16:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/consultantcies" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-08 16:59:54) [GET]
+  [4;36;1mRecruit Load (81.1ms)[0m   [0;1mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 235ms (View: 150, DB: 81) | 200 OK [http://localhost/recruits]

@@ -1,0 +1,58 @@
+<p>
+  <b>First name:</b>
+  <%=h @recruit.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @recruit.last_name %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%=h @recruit.status %>
+</p>
+
+<p>
+  <b>Level:</b>
+  <%=h @recruit.level %>
+</p>
+
+<p>
+  <b>Phone screen date:</b>
+  <%=h @recruit.phone_screen_date %>
+</p>
+
+<p>
+  <b>Phone screener:</b>
+  <%=h @recruit.phone_screener %>
+</p>
+
+<p>
+  <b>Problem assigned:</b>
+  <%=h @recruit.problem_assigned %>
+</p>
+
+<p>
+  <b>Problem received:</b>
+  <%=h @recruit.problem_received %>
+</p>
+
+<p>
+  <b>Reviewer:</b>
+  <%=h @recruit.reviewer %>
+</p>
+
+<p>
+  <b>Review completed:</b>
+  <%=h @recruit.review_completed %>
+</p>
+
+<p>
+  <b>Possible assignment:</b>
+  <%=h @recruit.possible_assignment %>
+</p>
+
+
+<%= link_to 'Edit', edit_recruit_path(@recruit) %> |
+<%= link_to 'Back', recruits_path %>

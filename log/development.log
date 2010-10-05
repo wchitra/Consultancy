@@ -848,3 +848,27 @@ Processing RecruitsController#index (for 127.0.0.1 at 2010-07-08 16:59:54) [GET]
 Rendering template within layouts/recruits
 Rendering recruits/index
 Completed in 235ms (View: 150, DB: 81) | 200 OK [http://localhost/recruits]
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-29 08:05:59) [GET]
+  [4;36;1mRecruit Load (18.9ms)[0m   [0;1mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 1192ms (View: 1085, DB: 19) | 200 OK [http://localhost/recruits]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-29 08:10:51) [GET]
+
+NameError (uninitialized constant RecruitController):
+  
+
+Rendered rescues/_trace (40.5ms)
+Rendered rescues/_request_and_response (14.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RecruitsController#index (for 127.0.0.1 at 2010-07-29 08:11:06) [GET]
+  [4;35;1mRecruit Load (1.0ms)[0m   [0mSELECT * FROM "recruits" [0m
+Rendering template within layouts/recruits
+Rendering recruits/index
+Completed in 72ms (View: 51, DB: 1) | 200 OK [http://localhost/]
